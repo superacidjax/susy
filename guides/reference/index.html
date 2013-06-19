@@ -375,11 +375,11 @@
 <h4><a href="#ref-isolate-grid" id="ref-isolate-grid">Isolate Grid</a></h4>
         
         <p>Isolate a group of elements in an grid (such as an image gallery)
-        using nth-child for positioning.
+        using nth-child or nth-of-type for positioning.
         Provide the column-width of each element,
         and Susy will determine the positioning for you.</p>
         
-        <div class="highlight"><pre><span class="c1">// isolate-grid(&lt;$columns&gt; [, &lt;$context&gt;, &lt;$from&gt;, &lt;$style&gt;])</span>
+        <div class="highlight"><pre><span class="c1">// isolate-grid(&lt;$columns&gt; [, &lt;$context&gt;, &lt;$selector&gt;, &lt;$from&gt;, &lt;$style&gt;])</span>
 <span class="nc">.gallery-item</span> <span class="p">{</span>
   <span class="k">@include</span><span class="nd"> isolate-grid</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
 <span class="p">}</span>
@@ -391,6 +391,9 @@
         <li>
 <code>&lt;$context&gt;</code>: Current nesting <em>Context</em>.
         Default: <code>$total-columns</code>.</li>
+        <li>
+<code>&lt;$selector&gt;</code>: either 'child' or 'of-type'.
+        Default: <code>child</code>.</li>
         <li>
 <code>&lt;$from&gt;</code>: The origin direction of your document flow.
         Default: <code>$from-direction</code>.</li>
@@ -481,9 +484,6 @@
         <li>
 <code>&lt;$sides&gt;</code>: The sides of the element that should bleed.
         Default: <code>left right</code>.</li>
-        <li>
-<code>&lt;$style&gt;</code>: Optionally return <code>static</code> lengths for grid calculations.
-        Default: <code>$container-style</code>.</li>
         <li>
 <code>&lt;$style&gt;</code>: Optionally return <code>static</code> lengths for grid calculations.
         Default: <code>$container-style</code>.</li>
@@ -894,7 +894,7 @@
 <li>
 <code>&lt;boolean&gt;</code>: <code>true</code> | <code>false</code>
 </li>
-        </ul></section><aside class="secondary"><p class="version">Version <span>1.0.8</span></p> <h2><a href="#ref-basic">Basic Usage</a></h2> <h3><a href="#ref-basic-settings">Basic Settings</a></h3> <ul>
+        </ul></section><aside class="secondary"><p class="version">Version <span>1.0.9</span></p> <h2><a href="#ref-basic">Basic Usage</a></h2> <h3><a href="#ref-basic-settings">Basic Settings</a></h3> <ul>
 <li><a href="#ref-total-columns">$total-columns</a></li>
           <li><a href="#ref-column-width">$column-width</a></li>
           <li><a href="#ref-gutter-width">$gutter-width</a></li>
