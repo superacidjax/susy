@@ -33,9 +33,7 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = ["docs/changelog.rst", "LICENSE.txt", "README.md", "lib/susy.rb"]
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Susy", "--main", "README.md"]
 
-  dependencies = {
-    "sass" => "~> 3.3.0"
-  }
+
   # Project Dependencies
   if s.respond_to? :specification_version then
     s.specification_version = 3
